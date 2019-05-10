@@ -2,20 +2,20 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './components/App';
 import { AppContainer } from 'react-hot-loader';
+import { createStore } from 'redux';
 import { HashRouter } from 'react-router-dom';
-import { store } from 'redux';
+import { Provider } from 'react-redux';
+import reducer from './../redux/modules/jobBoard'
 
-
+const store = createStore(reducer);
 
 const render = (Component) => {
   ReactDOM.render(
-    <AppContainer>
       <HashRouter>
-        <Provider>
+        <Provider store={store}>
           <Component/>
         </Provider>
-      </HashRouter>
-    </AppContainer>,
+      </HashRouter>,
     document.getElementById('react-app-root')
   );
 };

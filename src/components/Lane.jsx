@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import {masterJobsList} from './../data';
+import {initialState} from './../../redux/modules/jobBoard';
 import Job from './Job';
 
 
@@ -16,6 +16,8 @@ const LaneName = styled.div`
   height: 40px;
 `;
 
+const jobsList = initialState.masterJobsList;
+
 function Lane(props) {
   return (
     <Main>
@@ -23,11 +25,11 @@ function Lane(props) {
         <h4>{props.laneinfo.name}</h4>
       </LaneName>
       <div className="lane-content">
-        {Object.keys(masterJobsList).map(function(jobId, index) {
+        {Object.keys(jobsList).map(function(jobId, index) {
           let lane = props.laneinfo.name;
-          let jobLane = masterJobsList[jobId].lane;
+          let jobLane = jobsList[jobId].lane;
           if (jobLane === lane){
-            return <Job jobInfo={masterJobsList[jobId]}
+            return <Job jobInfo={jobsList[jobId]}
                         lane={lane}
               key={index} />;
           }
