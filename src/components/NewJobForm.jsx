@@ -44,7 +44,7 @@ function NewJobForm() {
       </form>
       <style jsx>{`
         .main {
-          animation: openUp 0.3s;
+          animation: openUp 0.3s ease-in;
         }
         form {
           border: 2px solid black;
@@ -54,7 +54,7 @@ function NewJobForm() {
 
         @keyframes openUp {
           0% {width: 0px}
-          100% {width: 200px}
+          100% {width: 400px}
         }
       `}</style>
     </div>
