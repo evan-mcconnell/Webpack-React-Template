@@ -10,6 +10,9 @@ function NewJobForm() {
     console.log(_title.value);
     console.log(_desciption.value);
     console.log(_lanes.value);
+    _title = '';
+    _desciption = '';
+    _lanes = '';
   }
 
   return (

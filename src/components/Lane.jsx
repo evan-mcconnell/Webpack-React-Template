@@ -17,7 +17,6 @@ const LaneName = styled.div`
 `;
 
 function Lane(props) {
-  console.log(masterJobsList)
   return (
     <Main>
       <LaneName>
