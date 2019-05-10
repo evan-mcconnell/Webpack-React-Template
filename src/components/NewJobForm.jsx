@@ -1,4 +1,6 @@
 import React from 'react';
+import styled from 'styled-components';
+
 
 function NewJobForm() {
   let _title = null;
@@ -14,9 +16,17 @@ function NewJobForm() {
     _desciption = '';
     _lanes = '';
   }
+  const HeadDiv = styled.div`
+    height: 39px;
+    wdith: 100%;
+    text-align: center;
+    padding-top: 10px;
+    font-weight: bold;
+  `;
 
   return (
-    <div>
+    <div className='main'>
+      <HeadDiv>Add a Job</HeadDiv>
       <form onSubmit={handleNewJobSubmission}>
         <input type='text' 
           id='title'
@@ -33,11 +43,13 @@ function NewJobForm() {
         <button type='submit'>Add New Job</button>
       </form>
       <style jsx>{`
-        div {
-          height: 94vh;
+        .main {
+          animation: openUp 0.3s;
+        }
+        form {
           border: 2px solid black;
           background-color: lightgrey;
-          animation: openUp 0.3s;
+          height: 94vh;
         }
 
         @keyframes openUp {

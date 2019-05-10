@@ -15,14 +15,9 @@ function JobBoard() {
     display: flex;
     flex-direction: row;
   `;
-  const HeadDiv = styled.div`
-    height: 30px;
-    wdith: 100%;
-  `;
 
   return (
     <div>
-      <HeadDiv></HeadDiv>
       <JobBoardOptions onOpenNewJob={handleOpenNewJob}/>
       <FlexDiv>
         { newJobOpen && 
