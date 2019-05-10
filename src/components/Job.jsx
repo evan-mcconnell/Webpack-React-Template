@@ -2,9 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 
 
-
-
-
 function Job(props) {
   console.log('job', props);
   let headerColor;
