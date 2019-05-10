@@ -32,6 +32,19 @@ function NewJobForm() {
           ref={(input) => {_lanes = input;}} />
         <button type='submit'>Add New Job</button>
       </form>
+      <style jsx>{`
+        div {
+          height: 94vh;
+          border: 2px solid black;
+          background-color: lightgrey;
+          animation: openUp 0.3s;
+        }
+
+        @keyframes openUp {
+          0% {width: 0px}
+          100% {width: 200px}
+        }
+      `}</style>
     </div>
   )
 }
