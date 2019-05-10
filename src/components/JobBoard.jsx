@@ -6,6 +6,7 @@ import NewJobForm from './NewJobForm';
 function JobBoard() {
 
   const [newJobOpen, setNewJobOpen] = useState(true);
+
   function handleOpenNewJob() {
     setNewJobOpen(!newJobOpen)
   }
@@ -13,8 +14,10 @@ function JobBoard() {
   return (
     <div>
       <JobBoardOptions onOpenNewJob={handleOpenNewJob}/>
-      <NewJobForm />
-      <LaneDisplay />
+      { newJobOpen && 
+        <NewJobForm />
+      }
+        <LaneDisplay />
     </div>
   );
 }
