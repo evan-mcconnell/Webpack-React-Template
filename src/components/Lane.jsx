@@ -11,7 +11,6 @@ const Main = styled.div`
 `;
 const LaneName = styled.div`
   text-align: center;
-  border-top: 1px solid black;
   border-bottom: 1px solid black;
   height: 40px;
 `;
