@@ -4,6 +4,9 @@ const ADD_JOB = 'ADD_JOB';
 
 // Action Creators
 
+// this is where the api call for getting /JOINing jobs and lanes will go
+// also where logic for ADDING these to db will go
+
 export function addJob(job) {
   return {
     type: ADD_JOB,
